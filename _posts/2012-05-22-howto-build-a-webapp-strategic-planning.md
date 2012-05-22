@@ -122,3 +122,6 @@ which consumes the API and allows usage of the app.
 
 In this final step we are going to push our app to a server and make it
 available to the public.
+
+Continue Reading:
+[Define what the app will do >>](/article-series/2012/05/22/howto-build-a-webapp-define-what-the-app-will-do/)
