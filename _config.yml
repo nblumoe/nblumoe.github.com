@@ -13,10 +13,10 @@ title : Nils Blum-Oeste
 tagline: All in software development
 author :
   name : Nils Blum-Oeste
-  email : nils@blum-oeste.de 
+  email : nils -at- blum-oeste.de
   github : nblumoe
-  twitter : nblumoe 
-#  feedburner : nblumoeste@googlemail.com
+  twitter : nblumoe
+  feedburner : nblumoeste@googlemail.com
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
