@@ -49,7 +49,7 @@ application of which you guessed they would use it.
 The key features for a MVP of the Pomodoro App I am working on are the following:
 * User can start a 25min timer
 * Timer does make a ticking noise
-* User can pause timer and track this as a distraction
+* Timer makes an alarm noise when time is up.
 
 I already have a lot of other features in mind. But these things have to
 wait till I am able to get feedback from the users about them. Maybe
@@ -110,8 +110,8 @@ throughout this article series:
 
 * As a user I want to start the pomodoro timer.
 * As a user I want to hear a ticking noise from the running timer.
-* As a user I want to pause the pomodoro timer.
-* As a user I want to track any distraction with a short note.
+* As a user I want to track any interruption with a short note.
+* As a user I want to hear an alarm noise from the finishing timer.
 
 For this app I dont need more stories than these to get a MVP. However
 for another app you may end up with more stories.
