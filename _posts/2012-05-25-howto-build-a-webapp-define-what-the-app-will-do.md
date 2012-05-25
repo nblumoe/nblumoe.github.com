@@ -110,7 +110,6 @@ throughout this article series:
 
 * As a user I want to start the pomodoro timer.
 * As a user I want to hear a ticking noise from the running timer.
-* As a user I want to track any interruption with a short note.
 * As a user I want to hear an alarm noise from the finishing timer.
 
 For this app I dont need more stories than these to get a MVP. However
