@@ -32,7 +32,25 @@ and error prone. We want to prevent this as much as possible.
 That's why we have this initial phase: We want to be sure that we
 implement the right thing. This will save time and reduce frustration.
 
-## What to define: Key Features
+## What to define
+### Vision
+
+In the first place you should formulate a vision for your app. This is
+to document the key idea of you app. Like many other things I am
+suggesting in this series, this help you to keep focused. Whenever you
+are going to evaluate a new thing you could put in your app, ask if it
+serves to deliver or improve your vision. The vision should be as short
+as one or two sentences. Google for example follows this vision:
+
+> Google’s mission is to organize the world’s information and make it
+> universally accessible and useful.
+
+Of course google is a huge thing with a very broad approach and your
+vision could be much more specific. Your vision may change if you pivot
+with your app idea but it is supposed to serve as a constant guideline
+for you. Do not skip or rush this step.
+
+### Key features
 
 Concentrate on the key features of you app. You do not have to consider
 everything right now. Just think about the most important things which
@@ -54,7 +72,8 @@ The key features for a MVP of the Pomodoro App I am working on are the following
 I already have a lot of other features in mind. But these things have to
 wait till I am able to get feedback from the users about them. Maybe
 they dont need the stuff or they would want to use it in another way
-that I am thinking of right now.
+that I am thinking of right now. Every feature you add has to be a step
+towards the vision you did formulate earlier.
 
 (You may ask why I did include the ticking noise. I consider this
 feedback from the timer as a very important part of the Pomodoro
@@ -83,7 +102,7 @@ a user story:
 Often a short version of that is used. In such a case, the
 &lt;benefit&gt; is skipped:
 
-> "As an user, I want to subscribe to a newsletter."
+> "As a user, I want to subscribe to a newsletter."
 
 Why should you use this? Because it puts an emphasis on things your
 users need. Formulating the features like this will help you to keep
@@ -105,12 +124,17 @@ are the things you should focus on during the implementation.
 
 ## Pomodoro App Example
 
-So here are the user stories for the pomodoro app I am going to build
+My vision for the pomodoro app is the following:
+
+> Get the pomodoro technique done online as close to the original
+> approach as possible. 
+
+And here are the user stories for the pomodoro app MVP I am going to build
 throughout this article series:
 
-* As a user I want to start the pomodoro timer.
-* As a user I want to hear a ticking noise from the running timer.
-* As a user I want to hear an alarm noise from the finishing timer.
+1. As a user I want to start the pomodoro timer.
+2. As a user I want to hear a ticking noise from the running timer.
+3. As a user I want to hear an alarm noise from the finishing timer.
 
 For this app I dont need more stories than these to get a MVP. However
 for another app you may end up with more stories.
