@@ -9,7 +9,7 @@ tags: [howto-webapp]
 {% include JB/setup %}
 
 [<< Strategic
-Planning](/article-series/2012/05/22/howto-build-a-webapp-strategic-planning/)
+Planning](/howto-build-a-webapp-strategic-planning/)
 (Previous Article)
 
 If you are familiar with agile methodologies you may want to avoid a lot
