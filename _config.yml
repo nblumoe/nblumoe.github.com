@@ -16,7 +16,7 @@ author :
   email : nils@blum-oeste.de
   github : nblumoe
   twitter : nblumoe
-  googeplus : https://plus.google.com/u/0/108620647514621362580
+  googleplus : https://plus.google.com/u/0/108620647514621362580
   feedburner : nils-blum-oeste
 
 # The production_url is only used when full-domain names are needed
@@ -27,7 +27,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://nblumoe.github.com
+production_url : http://nils-blum-oeste.de
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
