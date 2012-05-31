@@ -34,7 +34,7 @@ Another way to use vim for your command line interface would be to
 execute this in your bash:
 > set -o vi
 
-This way you will get an insert and command mode right in your command
+This way you will get vim insert and command modes right in your command
 line! So you can use the movement and replacement commands of vi. If you
-like it put this in your ~/.bashrc to make it a permanent change to your
+like it, put this in your ~/.bashrc to make it a persistent change to your
 bash.
