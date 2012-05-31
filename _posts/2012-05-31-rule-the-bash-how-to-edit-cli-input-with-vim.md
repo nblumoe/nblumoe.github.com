@@ -31,7 +31,9 @@ command will be executed and you are done!
 If you want to change your last CLI command, you can simple edit it
 with your default editor by executing this:
 
-> fc
+{% highlight bash %}
+$ fc
+{% endhighlight %}
 
 Thanks to [Joe
 Nerdan](https://plus.google.com/u/0/116774631632663162388) for pointing
@@ -41,7 +43,9 @@ this out!
 
 Another way to use vim for your command line interface would be to
 execute this in your bash:
-> set -o vi
+{% highlight bash %}
+$ set -o vi
+{% endhighlight %}
 
 This way you will get vim insert and command modes right in your command
 line! So you can use the movement and replacement commands of vi. If you
