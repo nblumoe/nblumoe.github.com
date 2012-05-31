@@ -28,6 +28,15 @@ default text editor and put the current command line in the buffer.
 Edit the command as you wish. Then save and close the buffer with :wq. The
 command will be executed and you are done!
 
+If you want to change your last CLI command, you can simple edit it
+with your default editor by executing this:
+
+> fc
+
+Thanks to [Joe
+Nerdan](https://plus.google.com/u/0/116774631632663162388) for pointing
+this out!
+
 ## II. Enable vi commands directly in your CLI
 
 Another way to use vim for your command line interface would be to
