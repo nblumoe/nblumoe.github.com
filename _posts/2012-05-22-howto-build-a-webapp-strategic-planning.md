@@ -64,9 +64,10 @@ So let's go for it and get a basic outline for the whole project.
 
 I will throw the outline at you and explain it afterwards:
 
-1. Get a plan for the project (we just startet with that)
-2. Define what the app will do
-3. Document the domain model
+0. Get a plan for the project (we just startet with that)
+1. Define what the app will do
+2. Document the domain model
+3. Get site structure and mockups
 4. Define an API
 5. Build the backend with RESTful API
 6. Build a web frontend client
@@ -98,7 +99,13 @@ With the knowledge what the app should be capable of doing we will
 create a domain model. This is a conceptual model for the app. It helps
 tremendously to do an efficient and effectiv implementation.
 
-### 3. Define an API
+### 3. Get site structure and mockups
+
+In this step we lay down the strucute of our app. We define the
+different views of it and create mockups for the UI. This way we get an
+idea of the app layout and rethink the features.
+
+### 4. Define an API
 
 From the domain model we have all the entities in our app. We are going
 to make the models and behaviour available through an API. Before
@@ -106,19 +113,19 @@ starting the actual implementation we will define this API. Together
 with the domain model we have defined what exactly has to be
 implemented.
 
-### 4. Build the backend with RESTful API
+### 5. Build the backend with RESTful API
 
 At this point we are well prepared to start coding! We will start with
 the backend as the core of our app. From the domain model you will get
 data models and database structure. The API is based on the predefined
 concept.
 
-### 5. Build a web frontend client
+### 6. Build a web frontend client
 
 As we have the backend in place, we can start to implement a client
 which consumes the API and allows usage of the app.
 
-### 6. Deploy the product
+### 7. Deploy the product
 
 In this final step we are going to push our app to a server and make it
 available to the public.
