@@ -855,3 +855,7 @@ pre {
 .addthis_toolbox a {
   border-bottom: 0px !important
 }
+
+.the-footer .unit-inner img {
+  margin-bottom: 0px !important;
+}
