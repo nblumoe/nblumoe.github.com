@@ -850,3 +850,7 @@ pre {
     margin-right: 360px;
   }
 }
+
+.addthis_toolbox a {
+  border-bottom: 0px !important
+}

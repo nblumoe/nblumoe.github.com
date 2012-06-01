@@ -11,6 +11,16 @@
 
 			<div class="bd">
 				<div class="entry-content">
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style ">
+            <a class="addthis_button_facebook_like"
+              fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_button_google_plusone"
+              g:plusone:size="medium"></a>
+            <a class="addthis_counter addthis_pill_style"></a>
+          </div>
+          <!-- AddThis Button END -->
 					{{ content }}
 					<div class="meta">
 						<p class="date-publish">
@@ -35,10 +45,17 @@
 				</div><!-- entry-content -->
 				<div class="misc-content">
 					<div class="social">
-						<ul class="list-linear">
-							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{ site.author.twitter }}" data-lang="en">Tweet</a></div></li>
-							<li><div class="twitter-follow"><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
-						</ul>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style
+              addthis_32x32_style">
+              <a class="addthis_button_preferred_1"></a>
+              <a class="addthis_button_preferred_2"></a>
+              <a class="addthis_button_preferred_3"></a>
+              <a class="addthis_button_preferred_4"></a>
+              <a class="addthis_button_compact"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <!-- AddThis Button END -->
 					</div>
 					
 					{% include JB/comments %}
