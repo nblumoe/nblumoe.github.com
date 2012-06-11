@@ -66,8 +66,8 @@ will be extended to 42.195km. This means extending this unit by ~4.7km
 per month.
 
 By the end of August I would like to run 34km on the weekend training.
-Average pace should be max. 6min/km. If everything goes well I will
-continue with that progress and get to the marathon distance in Octobre.
+Average pace should be max. 6min/km. If everything goes well I, will
+continue with that progression and get to the marathon distance in Octobre.
 
 That's the theory! I will keep you posted about how well I am doing in
 practice. ;)
