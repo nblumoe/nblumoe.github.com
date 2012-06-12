@@ -13,6 +13,8 @@ Running a marathon has been on my list for quite a while now. The past
 just did sign up for the [Frankfurt
 Marathon](http://www.bmw-frankfurt-marathon.com/) in October.
 
+![Runner](/assets/images/frankfurt.jpg)
+
 ## What are the goals?
 
 The primary goal is to finish. In general this probably
@@ -41,6 +43,8 @@ would help to bear up the stress during long runs..
 
 Currently I do half marathons once a week and finish them in slightly
 under 2h. My longest run so far was 31km, but that was 2.5 years ago.
+
+![Runner](/assets/images/runner.jpg)
 
 ## How to do it?
 
