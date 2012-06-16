@@ -8,7 +8,7 @@ tags: [howto-webapp]
 {% include JB/setup %}
 
 In the [previous
-article](/2012/05/25/howto-build-a-webapp-define-what-the-app-will-do)
+article](/howto-build-a-webapp-define-what-the-app-will-do)
 we did define a vision and the key features for a MVP of our app. Now we
 will discover the domain of our app and get a model of it. Such a domain
 model is a conceptual model of the entities and their
