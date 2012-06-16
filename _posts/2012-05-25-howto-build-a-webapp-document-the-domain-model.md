@@ -17,14 +17,14 @@ relationships relevant for you app.
 ## Why you should do it
 
 The reason to produce this is to
-clarify your understandin of the problem you are trying to solve with your
+clarify your understanding of the problem you are trying to solve with your
 app. It is just a structured way to think about your software. By doing so
 you often will change your view on the problem: You will discover things you
 did not consider beforehand. In other cases you may be able to simplify your
 initial ideas.
 
 So you really should focus on thinking about the domain you are
-adressing with your app. Creating a visual representation helps in
+addressing with your app. Creating a visual representation helps in
 thinking about it. This is the main reason why to do it. It's not about
 creating a documentation which will last forever.
 
@@ -61,7 +61,7 @@ width="100%"/>](/assets/images/PomodoroAppDomainModel.png)
 
 As I already explained, you do not have to use UML to document this. You
 have to find out, what works best for you. The domain model shown above
-(hopfefully) covers every entity in the app I am going to build. Thus we
+(hopefully) covers every entity in the app I am going to build. Thus we
 can base the API and our implementation on that.
 
 Of course the model does not hold every class we are going to implement!
