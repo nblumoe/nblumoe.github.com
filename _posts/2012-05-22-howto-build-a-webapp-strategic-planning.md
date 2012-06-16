@@ -34,6 +34,7 @@ Keep that in mind when adopting this for you project.
 
 Throughout the series I will build a Webapp to use the Pomodoro
 Technique. So you can track the development progress with this project.
+You can find the app here: [PomodoroEasy](http://www.pomodoroeasy.com)
 
 I will use established, modern techniques to do so. I dont focus on the
 latest, hyped technologies, but rather solid, well known and robust
