@@ -5,7 +5,7 @@ tagline: All in software development
 ---
 {% include JB/setup %}
 
-... to my personal blog about developing web and mobile software.
+... to my personal blog about self and software development.
 
 Here are the most recent posts:
 
