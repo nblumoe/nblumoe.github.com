@@ -69,5 +69,3 @@ It is not a class diagram to mirror your implementation. Creating the
 domain model is a tool to get known to the domain, the problem you are
 going to address with you app.
 
-Got your own domain model? Then go ahead and [create an API]() based on
-that.
