@@ -30,7 +30,7 @@ There is still some stuff to do on the app before I can send out invites
 to the pre-launch. But make sure to enjoy and work with the free timer
 till then.  Oh, and the launch page needs some rework... I do know! ;)
 
-Any kind of feedback is heartly appreciated.
+Any kind of feedback is highly appreciated.
 
 ### Links
 1. [How to build a webapp: Article Series][howto-webapp]
