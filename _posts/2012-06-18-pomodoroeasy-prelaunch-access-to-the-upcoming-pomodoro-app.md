@@ -27,8 +27,8 @@ timer I am providing there. Of course it is also available without
 signing up. So at least check out the [free pomodoro timer][free-timer].
 
 There is still some stuff to do on the app before I can send out invites
-to the pre-launch. But make sure to work with and enjoy the free timer
-till then.  Oh, and the launch page needs I rework... I do know! ;)
+to the pre-launch. But make sure to enjoy and work with the free timer
+till then.  Oh, and the launch page needs some rework... I do know! ;)
 
 Any kind of feedback is heartly appreciated.
 
