@@ -3,8 +3,8 @@ layout: post
 title: "HowTo build a WebApp: Define what the app will do"
 description: "To stay focused during implementation you need to know
 which functionality your app has to provide."
-category: article-series
-tags: [howto-webapp]
+category: software
+tags: [article-series, howto-webapp]
 ---
 {% include JB/setup %}
 

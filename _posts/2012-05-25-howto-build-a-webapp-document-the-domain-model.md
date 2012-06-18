@@ -2,8 +2,8 @@
 layout: post
 title: "HowTo build a webapp: Document the domain model"
 description: ""
-category: article-series
-tags: [howto-webapp]
+category: software
+tags: [article-series, howto-webapp]
 ---
 {% include JB/setup %}
 

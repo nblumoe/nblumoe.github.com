@@ -3,8 +3,8 @@ layout: post
 title: "HowTo build a WebApp: Strategic Planning"
 description: "First article in this series about building a modern
 Webapp from scratch to deployment"
-category: article-series
-tags: [howto-webapp]
+category: software
+tags: [article-series, howto-webapp]
 ---
 {% include JB/setup %}
 

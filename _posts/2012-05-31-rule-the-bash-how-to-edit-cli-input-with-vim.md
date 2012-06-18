@@ -2,8 +2,8 @@
 layout: post
 title: "Rule the bash: How to edit CLI input with VIM"
 description: "Long input to the command line can be easily edited using vim."
-category: tools 
-tags: [vim, bash]
+category: software
+tags: [tools, vim, bash]
 ---
 {% include JB/setup %}
 
