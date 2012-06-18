@@ -19,6 +19,9 @@ technique. So if you are interested in the Pomorodo Technique, checkout
 [PomodoroEasy] and sign up for pre-launch access. I am happy to get your
 feedback for this!
 
+[<img src="/assets/images/PomodoroEasy_free_timer.png" alt="PomodoroEasy
+Free Pomodoro Timer" title="Free Pomodoro Timer" class="right">][free-timer]
+
 After signing up, you get redirected immediately to the free pomodoro
 timer I am providing there. Of course it is also available without
 signing up. So at least check out the [free pomodoro timer][free-timer].
