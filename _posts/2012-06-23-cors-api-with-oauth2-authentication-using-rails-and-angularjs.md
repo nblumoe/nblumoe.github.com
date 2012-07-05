@@ -72,7 +72,6 @@ CORS is supported by most modern web browsers.
 
 ### CORS
 
-#### Set CORS headers in response
 To enable CORS we have to set some HTTP headers. I did this globally in
 the `ApplicationController`:
 
@@ -143,6 +142,17 @@ stackoverflow, [right here][stackoverflowwarden].
 
 [warden]: https://github.com/hassox/warden/
 
+Finally we have to set a route in `routes.rb`. This is simple: We just have to make sure every request with the
+OPTIONS method goes to the `options` action of the
+`ApplicationController`:
+{% highlight ruby %}
+match '/*path' => 'application#options', :via => :options
+{% endhighlight %}
+
+That's it! Every response from the server will have the CORS HTTP
+headers and we deal with the OPTIONS call the client will send to check
+if CORS is enabled.
+
 ### OAuth2
 As I am using Devise, I did use the
 [devise_oauth2_providable][oauth2providablegem] gem to
@@ -152,5 +162,14 @@ migration, add routes and configure the User model.
 
 [oauth2providablegem]: https://github.com/socialcast/devise_oauth2_providable
 
+Basically that is all you have to do, to get your OAuth2 Provider based
+on your user authentication with Devise. Isn't that great? However you
+still have to do the authorization somehow. Just the same way you would
+do it normally, with [CanCan][cancan] for example.
+
+[cancan]: https://github.com/ryanb/cancan/
 
 ## Frontend Implementation
+
+As we have everythin in place on the backend, let's see how to connect
+to this from the clientside.
