@@ -29,7 +29,7 @@ of all, I wanted to gain some experience with OAuth2. But I think this
 way it is a more robust and future-proof solution. Authentication is a
 big security issue, so I would rather build on a proven standard.
 
-> Attention: In this example I am using http everwhere. This is fine for
+> Attention: In this example I am using http everywhere. This is fine for
 > testing purposes. But in production you must(!) use https. Otherwise
 > you would send non-encrypted credentials, which is a big security
 > issue.
@@ -49,7 +49,7 @@ If the client would be a 3rd party application you would not use this
 authentication flow, but the "Implicit Grant" flow. Imagine you would
 own twitter and some 3rd party would build a twitter client. The user
 should not have to provide it's twitter login in the 3rd party client,
-because it could easily be catched there and misused.
+because it could easily be caught there and misused.
 
 [oauth2draft]: http://tools.ietf.org/html/draft-ietf-oauth-v2-28
 [resourceownerdraft]: http://tools.ietf.org/html/draft-ietf-oauth-v2-28#section-1.3.3
@@ -60,7 +60,7 @@ because it could easily be catched there and misused.
 As the client and the server reside on different domains, we need to
 take care of [CORS][corswiki]. You might consider using a reverse proxy
 with the two servers behind it to use the same domain, but different
-servers for backend and frontend. This would be an alternatice approach,
+servers for backend and frontend. This would be an alternative approach,
 which I do not cover here.
 
 Implementing CORS is pretty easy, we just have to set some HTTP headers.
@@ -162,7 +162,7 @@ migration, add routes and configure the User model.
 
 [oauth2providablegem]: https://github.com/socialcast/devise_oauth2_providable
 
-We have to create an OAuth2 client in the databse to get access from our
+We have to create an OAuth2 client in the database to get access from our
 client application. I put this into the database seed, but you might
 want to create it dynamically or in any other way:
 
@@ -178,13 +178,13 @@ webclient.save
 {% endhighlight %}
 
 You can provide a name for the client. The `:redirect_uri` attribute is
-not used in the authentication workflow we are using. But still you
+not used in the authentication flow we are using. But still you
 should provide a valid URL to your client app here. The `website`
 parameter is just the URL of your client app's homepage.
 
 Finally you have to provide a unique `secret` and `identifier` for your
 app. These attributes must be known and used by the client app. In the
-authentication workflow we use, the `secret` does not provide additional
+authentication flow we use, the `secret` does not provide additional
 security, as it can be read in the client's javascript code easily.
 However, we still have to provide it, to identify our client app.
 
@@ -237,10 +237,10 @@ implemented as a config function of your application module:
 
 So for every HTTP response this checks if it is a 401 response. If this
 is true a deferred response is created and an event to react on the 401
-is broadcasted.
+is broad casted.
 
 ### Login form
-We have to deal with the event broadcasted by the HTTP interceptor.
+We have to deal with the event broad casted by the HTTP interceptor.
 We want to show a login
 dialog to get the user credentials and send them to the backend OAuth2
 provider. We are using a directive which builds a login form for that:
@@ -261,7 +261,10 @@ provider. We are using a directive which builds a login form for that:
       });
 
       var button = angular.element(element.find('button'));
-      button.bind('click', function(){scope.$emit('event:authenticate', scope.username, scope.password)});
+      button.bind('click', function(){
+        scope.$emit('event:authenticate', scope.username,
+          scope.password)
+      });
     }
   }
 })
@@ -289,8 +292,11 @@ form:
 Have a look at the directive again, there are two lines we did not
 discuss yet:
 {% highlight javascript %}
-      var button = angular.element(element.find('button'));
-      button.bind('click', function(){scope.$emit('event:authenticate', scope.username, scope.password)});
+var button = angular.element(element.find('button'));
+button.bind('click', function(){
+  scope.$emit('event:authenticate', scope.username,
+    scope.password)
+});
 {% endhighlight %}
 
 We get the button from the DOM and bind a function to it's `click`
@@ -299,29 +305,37 @@ and we pass the user credentials from the login form.
 
 ### Send authentication request
 
-To handle the request we bind a function to the broadcasted
+To handle the request we bind a function to the broad casted
 `event:authenticate` event. This can be done in the `run` method of you
 app module:
 
 {% highlight javascript %}
-.run(['$rootScope', '$http', 'TokenHandler', function( scope, $http, tokenHandler ) {
-  scope.$on( 'event:authenticate', function( event, username, password ) {
-    var payload = {
-      username: username,
-      password: password,
-      grant_type: 'password',
-      client_id: 'your-client-id',
-      client_secret: 'client-secret' 
-    };
-    $http.post('http://localhost:3001/oauth2/token', payload).success( function( data ) {
-      tokenHandler.set( data.access_token );
-      scope.$broadcast('event:authenticated');
-    });
-  });
-}]);
+.run(['$rootScope', '$http', 'TokenHandler',
+  function( scope, $http, tokenHandler ) {
+    scope.$on( 'event:authenticate',
+      function( event, username, password ) {
+        var payload = {
+          username: username,
+          password: password,
+          grant_type: 'password',
+          client_id: 'your-client-id',
+          client_secret: 'client-secret' 
+        };
+
+        $http.post('http://localhost:3001/oauth2/token',
+          payload).success(
+            function( data ) {
+              tokenHandler.set( data.access_token );
+              scope.$broadcast('event:authenticated');
+            }
+          );
+      }
+    );
+  }
+]);
 {% endhighlight %}
 
-In the dependecies you find `TokenHandler`. This is not a default
+In the dependencies you find `TokenHandler`. This is not a default
 AngularJS module. In my app, this is used to manage the authentication
 token you will get from the server in it's response. As you have to use
 this auth token in any further request, you may want to [have a look at
@@ -336,7 +350,7 @@ authentication flow we want to use. `client_id` and `client_secret` you
 did define previously in the backend implementation. You have to send
 these to identify the client app. Keep in mind, that these are public.
 Even the `secret` does not provide additional security in our
-authentication workflow, as it can easily be read from the clientside
+authentication flow, as it can easily be read from the clientside
 javascript code. But still we have to provide it, to identify our client
 application.
 
@@ -352,21 +366,28 @@ that we have a valid auth token now.
 You can react to this event in you app. For example the login directive
 hides the login form:
 {% highlight javascript %}
-      scope.$on('event:authenticated', function( event ) {
-        scope.show = false;
-      });
+scope.$on('event:authenticated', function( event ) {
+  scope.show = false;
+});
 {% endhighlight %}
 
-You probablby want to get some kind of resource from the backend now. So
-you can do so by binding to this event:
+You probably want to get some kind of resource from the backend now.
+You can do so by binding to this event:
 
 {% highlight javascript %}
-  $scope.$on('event:authenticated', function() {
-    $scope.getResource();
-  };
+$scope.$on('event:authenticated', function() {
+  $scope.getResource();
+};
 {% endhighlight %}
 
-Whereas `getResource()` sends a request to the server to get data. You
+`getResource()` sends a request to the server to get data. You
 probably want to use [$resource][resouredoc] for this.
 
 [resouredoc]: http://docs.angularjs.org/api/ngResource.$resource
+
+Some of the ideas for the HTTP interceptor came from a great blog post by Witold Szczerba, to be found
+[here][angularautharticle]. He also describes a very nice way to store
+HTTP requests to which the server responded with 401 and how to send
+this requests again after authenticating. Check out his article!
+
+[angularautharticle]: http://www.espeo.pl/2012/02/26/authentication-in-angularjs-application
