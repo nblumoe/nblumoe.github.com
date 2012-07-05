@@ -93,44 +93,130 @@ resource actions in a function which appends the auth token. So first of
 all we create a new service to deal with all the token related stuff:
 
 {% highlight javascript %}
-  .factory('TokenHandler', function() {
-    var tokenHandler = {};
-    var token = "none";
+.factory('TokenHandler', function() {
+  var tokenHandler = {};
+  var token = "none";
 
-    tokenHandler.set = function( newToken ) {
-      token = newToken;
+  tokenHandler.set = function( newToken ) {
+    token = newToken;
+  };
+
+  tokenHandler.get = function() {
+    return token;
+  };
+
+{% endhighlight %}
+
+As you can see, we create a service called `TokenHandler` which stores
+the `token` itself and provides getter and setter methods.
+
+Now, let's have a look at the actual action wrapping:
+{% highlight javascript %}
+  // wraps given actions of a resource to send auth token
+  // with every request
+  tokenHandler.wrapActions = function( resource, actions ) {
+    // copy original resource
+    var wrappedResource = resource;
+    // loop through actions and actually wrap them
+    for (var i=0; i < actions.length; i++) {
+      tokenWrapper( wrappedResource, actions[i] );
     };
+    // return modified copy of resource
+    return wrappedResource;
+  };
+{% endhighlight %}
 
-    tokenHandler.get = function() {
-      return token;
+The method `wrapAction` takes a resource and an array with strings
+identifying the actions to be wrapped as parameters. A copy of the
+resource is created, modified and returned. We dont want to change the
+original resource to prevent any side effects ('Don't change parameters
+inside a function').
+
+We loop throught the actions array, calling the method `tokenWrapper`
+for every single action. So finally let us have a look what happens
+there:
+
+{% highlight javascript %}
+  // wraps resource action to send request with auth token
+  var tokenWrapper = function( resource, action ) {
+    // copy original action
+    resource['_' + action]  = resource[action];
+    // create new action wrapping the original
+    // and sending token
+    resource[action] = function( data, success, error){
+      return resource['_' + action](
+        // call action with provided data and
+        // appended access_token
+        angular.extend({}, data || {},
+          {access_token: tokenHandler.get()}),
+        success,
+        error
+      );
     };
+  };
 
-    // wrap given actions of a resource to send auth token with every
-    // request
-    tokenHandler.wrapActions = function( resource, actions ) {
-      // copy original resource
-      var wrappedResource = resource;
-      for (var i=0; i < actions.length; i++) {
-        tokenWrapper( wrappedResource, actions[i] );
-      };
-      // return modified copy of resource
-      return wrappedResource;
-    };
+  return tokenHandler;
+});
+{% endhighlight %}
 
-    // wraps resource action to send request with auth token
-    var tokenWrapper = function( resource, action ) {
-      // copy original action
-      resource['_' + action]  = resource[action];
-      // create new action wrapping the original and sending token
-      resource[action] = function( data, success, error){
-        return resource['_' + action](
-          angular.extend({}, data || {}, {access_token: tokenHandler.get()}),
-          success,
-          error
-        );
-      };
-    };
+In a first step we copy the original action and store it with a new
+name. We prepend an underscore and save it into the resource. So the
+action `query` for example is now also available as `_query`.
 
-    return tokenHandler;
+Afterwards we overwrite the original action with our wrapper function.
+Parameters of the wrapper are identical with the normal actions: The
+resource data `data` and callback functions `success` and `error`.
+
+The wrapper calls the renamed original action methods (`_query` for
+example) and returns the result. But checkout the first parameter we
+pass to the original action: We use the `data` parameter and append the
+`access_token` as an object literal to that. This way, the auth_token is
+send to the API as a parameter called `access_token`!
+
+### Usage of the token wrapper
+Of course we have to actually use our new action wrapper in the resource
+we defined in the first section. So here is how to use it:
+
+{% highlight javascript %}
+.factory('Todo', ['$resource', 'TokenHandler', function($resource, tokenHandler) {
+  var resource = $resource('http://localhost:port/todos/:id', {
+    port:":3001",
+    id:'@id'
+    }, {
+      update: {method: 'PUT'}
   });
-{% highlight %}
+
+  resource = tokenHandler.wrapActions( resource,
+    ["query", "update", "save"] );
+
+  return resource;
+}])
+{% endhighlight %}
+
+The `TokenHandler` has to be added as a dependency and is passed as a
+parameter to the constructor method. No changes to the definition of
+`resource` are necessary. But before returning `resource` we overwrite
+with the result form `wrapActions` method of the `tokenHandler`. We pass
+the original resource and an array with string identifying the actions
+we want to wrap.
+
+As you can see we can easily overwrite the default actions which are
+created by `$resource` implicitly. You can use the overwritten actions
+the same way you would use the defaults:
+
+{% highlight javascript %}
+// get all todos
+var todos = Todo.query();
+
+// save a todo
+todo[0].text = "New Text";
+todo[0].$save();
+{% endhighlight %}
+
+You can get the full code of the `TokenHandler` service [here][gist].
+This approach is based on an [idea by Andy Joslin][andyjoslin] on a
+stackoverflow question. Thanks, Andy!
+
+[gist]: https://gist.github.com/3052052
+[andyjoslin]: http://stackoverflow.com/questions/11176330/angularjs-how-to-send-auth-token-with-resource-requests
+
