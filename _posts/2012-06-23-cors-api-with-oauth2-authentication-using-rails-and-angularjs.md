@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CORS API with Oauth2 authentication using Rails and AngularJS"
+title: "CORS API with OAuth2 authentication using Rails and AngularJS"
 description: ""
 category: software
 tags: [ruby-on-rails, angularjs, API, oauth]
