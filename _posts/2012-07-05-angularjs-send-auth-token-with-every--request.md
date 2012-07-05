@@ -21,7 +21,7 @@ token as a default request parameter in the factory.
 This article shows, how to solve this. First we define our resource,
 consuming a RESTful API, without using an authentication. Afterwards we
 create a wrapper to send the auth token with every request. This allows
-consumption of an API with an exchangable auth token.
+consumption of an API with an exchangeable auth token.
 
 [angularjs]: http://angularjs.org/
 [angularjs-resource]: http://docs.angularjs.org/api/ngResource.$resource
@@ -54,7 +54,7 @@ port to the `$resource` constructor. Have a look at the URL string:
 `:port` and `:id` are being replaced by the parameters defined in the
 object literal right after the URL string itself.
 
-Settind a port is not as straight forward, as it could be: In this
+Setting a port is not as straight forward, as it could be: In this
 example we are setting it to 3001. Right now
 you cannot put it into the URL directly, as AngularJS would interpret
 `:3001` in the URL as a placeholder with the name `3001`. So we put the
@@ -128,11 +128,11 @@ Now, let's have a look at the actual action wrapping:
 
 The method `wrapAction` takes a resource and an array with strings
 identifying the actions to be wrapped as parameters. A copy of the
-resource is created, modified and returned. We dont want to change the
+resource is created, modified and returned. We don't want to change the
 original resource to prevent any side effects ('Don't change parameters
 inside a function').
 
-We loop throught the actions array, calling the method `tokenWrapper`
+We loop through the actions array, calling the method `tokenWrapper`
 for every single action. So finally let us have a look what happens
 there:
 
