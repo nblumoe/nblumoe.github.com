@@ -16,13 +16,13 @@ let's have fun and create some additional pressure by publishing so far.
 ## How to measure progress
 The main goal is to be able to run the marathon distance. That's why
 *maximum run distance* is of major importance. Secondly I want to finish
-in under 4 hours. This means a pace of under 5.7 min/km (btw I really
+in under 4 hours. This means a pace of under 5.7 min/km (btw. I really
 dislike using this unit, but it's just so common for running). So I am
 having an eye on the *average pace* of the longest run.
 
 Although I pointed out in the first post, that *reducing weight* is not a
 serious goal. This changed somehow: Instead of loosing some weight or at
-least having it constat, I did gain some weight. That's just not
+least having it constant, I did gain some weight. That's just not
 acceptable! ;)
 So from now on, reducing weight to 76 kg is officially a part of the
 things to achieve till the 28th October.
@@ -40,7 +40,7 @@ the progression is good. I have to keep up the good work here.
 ![Pace](/assets/images/first_marathon_resume_chart_pace.png)
 
 As it turns out, reaching the goal to finish the first marathon in under
-4h, might be harder than expected. The chart clearly shows a tendency to
+4 hours, might be harder than expected. The chart clearly shows a tendency to
 run slower with increasing run distance. Of course that's just natural,
 but I have to keep pushing my speed to reach the goal. This might become
 tough.
