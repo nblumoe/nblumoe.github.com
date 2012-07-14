@@ -3,7 +3,7 @@ layout: post
 title: "Project 42195: Training for the first marathon"
 description: ""
 category: sports 
-tags: [running, training]
+tags: [running, marathon, training]
 ---
 {% include JB/setup %}
 
