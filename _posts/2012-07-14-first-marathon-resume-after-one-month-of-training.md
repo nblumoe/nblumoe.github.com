@@ -57,9 +57,9 @@ reduce it for the marathon. This should also help in increasing the pace.
 
 I am very confident, that I will not have big issues with reaching the
 marathon distance within time. However it's being said, that the
-difficulty start at >30 km. I am quite curious, I have to admit.
+difficulties start at >30 km. I am quite curious, I have to admit.
 
-Besides that I want to get faster and reduce weight. I will keep an eye
+Besides that, I want to get faster and reduce weight. I will keep an eye
 on my pace on the long runs and try to keep it under 6 min/km at least.
 Regarding the weight loss: I will reduce carbohydrates in favor of
 protein. Furthermore I am going to fulfill my promise from the first
