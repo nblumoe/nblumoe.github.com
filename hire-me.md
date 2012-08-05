@@ -17,7 +17,7 @@ just send me an [eMail](mailto:nils@blum-oeste.de) or call me
 how to solve your problems!
 
 ## Why you may want me
-So you prefer to read on? That's just fine. Let me brefly introduce myself a
+So you prefer to read on? That's just fine. Let me briefly introduce myself a
 little more: I was born in 1982 and literally grew up with computers and
 programming. Coding has been my passion since then and I did get a lot
 of experience in different languages and projects.
@@ -39,12 +39,12 @@ development team.
 
 Besides getting your coding needs done, I will help you with getting
 your software architecture right. Furthermore we can improve your development
-process together by introductin well structured, lean and agile
+process together by introduction well structured, lean and agile
 techniques.
 
 ## The bare Facts
 You want to see some bullet points with skills and project experience?
-Allright, here you go:
+Alright, here you go:
 ### Software Development Skills
 - Cross platform and Android mobile apps
 - Web Development
