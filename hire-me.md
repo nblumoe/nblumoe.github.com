@@ -29,6 +29,10 @@ decided to be a full time software developer. Just too often I had to deal with
 bad software, which really annoyed me. As I love software development so
 much, this is what I want to do: Deliver great Software!
 
+Until about three years ago I mostly developed desktop software. Today I
+focus on state of the art web and mobile technologies and their combination.
+I did work in startups and love the scene.
+
 Throughout all the different projects I have been involved in, I did
 realize how crucial the underlying processes are. To get a great product
 done, it is not enough to have good coders. It is very important to have
@@ -51,6 +55,7 @@ Alright, here you go:
 - Web and Mobile Software Architecture
 - Scrum and Agile Methodologies
 - Lean Processes in Software Development
+- Distributed Development Teams, Outsourcing/Offshoring
 - Scientific Data Analysis, Statistics
 - Online Marketing and SEO basics
 
@@ -80,7 +85,10 @@ I would love to talk to you and offer you my expertise for your project.
 Whether you are a startup, an agency or an enterprise: If you are
 interested in my
 help as a freelancer or have a nice employment offer, please contact me.
+
+I am fluent in German (mother tongue) and English.
 - eMail: [nils@blum-oeste.de](mailto:nils@blum-oeste.de)
 - Phone: [+49 157 8590 4890](tel:+4915785904890)
 - [Linkedin](http://www.linkedin.com/pub/nils-blum-oeste/45/161/19)
 - [Blog](/)
+
