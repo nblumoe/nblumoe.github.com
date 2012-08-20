@@ -9,7 +9,8 @@ tags: [running, marathon, training]
 
 Roughly one month ago I did sign up for my first marathon. At that time
 I also wrote a [post about how I will prepare][first-post] for that. So
-let's have fun and create some additional pressure by publishing so far.
+let's have fun and create some additional pressure by publishing the
+results so far.
 
 [first-post]: /project-42195-training-for-the-first-marathon/
 
