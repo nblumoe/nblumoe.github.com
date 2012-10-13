@@ -65,7 +65,7 @@ $ gem install tmuxinator
 {% endhighlight %}
 
 tmuxinator wants to start your favorite editor, so make sure you set an
-environment variable EDITOR accordingly. Also put this in your
+environment variable $EDITOR accordingly. Also put this in your
 `~/.bashrc`:
 {% highlight bash %}
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source
@@ -83,7 +83,7 @@ Create a new project with tmuxinator first:
 $ tmuxinator new awesome_app
 {% endhighlight %}
 
-This will create a yaml setup file in `~/.tmuxinator` and should fire up
+This will create a yaml setup file in `~/.tmuxinator/` and should fire up
 your editor with that file. If not, just open it by hand.
 
 Within this file, you setup a project name and a directory for that
@@ -130,6 +130,27 @@ tabs:
   - server: rails s
   - logs: tail -f log/development.log
 {% endhighlight %}
+
+It has 5 windows, the first one called 'editor' has two panes. One pane
+starts up with vim editor, whereas the other pane executes git fetch on
+startup. Thus we automatically have the latest changes from our remote
+git repo and vim at hand. The other windows start with the rails
+console, an empty shell (I am using it for capistrano stuff, thus the
+name), the rails server and finally a window which holds most recent log
+output.
+
+To start working with this setup simply type
+{% highlight bash %}
+$ tmuxinator awesome_app
+{% endhighlight %}
+
+and you are ready to go, having an up-to-date repo, a running server and
+your editor right in place. `mux` is an alias for `tmuxinator` so you
+could also use `mux awesome_app` instead.
+
+To get help for tmux commands simply hit `Ctrl+B ?` to show all the tmux
+commands. You can also configure lots of tmux behaviour by editing
+`~/.tmux.conf`.
 
 ## Links
 - [tmux][1]
