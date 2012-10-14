@@ -13,30 +13,38 @@ you are a web developer for example, you want to edit files, have a look
 on your webserver logs, monitor automated tests, handle your git repo
 and so on. There is a lot of stuff going on there!
 
-All these tools want to be tamed, to achieve your most productiv
-workflow. Handling lots of separate terminal windows often is not the
+All these tools want to be tamed, to achieve your most productive
+work flow. Handling lots of separate terminal windows often is not the
 most efficient thing. That's where [tmux][1] comes into play.
 
 ## What is tmux good for?
 
 tmux simply stands for "terminal multiplexer" and is an alternative to
-the well known [screen][2]. It's most obvious benefit is to manage
+the well known [screen][2]. It's most obvious use is to manage
 multiple terminals. This could also be achieved by using a window
 manager with tiling support like [xmonad][3] or [KWin][4]. The benefit
 of tmux here is, that it works within a terminal. Thus it can be used
-via ssh an a remote server without a GUI.
+via ssh on a remote server without a GUI.
 
-But there is more you can get with tmux: It is built with a
+Here is an example session, used to work on my PhD thesis:
+
+[<img src="/assets/images/tmux_phd.png" alt="tmux Example"
+title="tmux Example"
+width="100%"/>](/assets/images/tmux_phd.png)
+
+It is built with a
 client/server architecture. This allows to use it for (remote) pair
 programming. Furthermore you could put your tmux session on a remote
 server and have a persistent working environment at hand everywhere.
 
-There are even more things you could do with it, but let us rather have
+You can define the layout of your tmux sessions and execute commands when
+starting it. This way it is easy to kick off your working environment
+with all the stuff you need to be productive right away.  There are even more things you could do with it, but let us rather have
 a look on how to use it!
 
 ## Installation and Setup
 
-In recent linux distributions you should have a tmux package available.
+In recent Linux distributions you should have a tmux package available.
 So installation should be as easy as:
 
 {% highlight bash %}
@@ -54,7 +62,6 @@ ruby gem simplifies the setup of your tmux sessions. For example you
 would want to create a specific session for a web development project.
 When starting the session it would automatically change the directory
 and fire up all your tools like servers and the editor.
-
 (If you do not want to use a ruby gem
 for that, you can achieve the same thing with shell scripts.)
 
@@ -72,7 +79,7 @@ environment variable $EDITOR accordingly. Also put this in your
 $HOME/.tmuxinator/scripts/tmuxinator
 {% endhighlight %}
 
-## Let's use it
+## Create a Project and use it
 
 I will show you now, how to get a nice setup for a Ruby on Rails
 project. Feel free to adapt it to your own needs.
@@ -110,7 +117,7 @@ only has to provide the shell command to be run within. You can also use
 command being run intially.
 
 A basic Ruby on Rails project environment could look like this:
-{% highlight bash %}
+{% highlight yaml %}
 # ~/.tmuxinator/awesome_app.yml
 # you can make as many tabs as you wish...
 
@@ -149,12 +156,53 @@ your editor right in place. `mux` is an alias for `tmuxinator` so you
 could also use `mux awesome_app` instead.
 
 To get help for tmux commands simply hit `Ctrl+B ?` to show all the tmux
-commands. You can also configure lots of tmux behaviour by editing
-`~/.tmux.conf`.
+commands. You should easily figure out, how to move around between
+windows and panes. If you want to exit your tmux session you could
+either do `Ctrl+B :kill-sessions` (kills the session) or `Ctrl+B d`
+ (detach only, session persists).
+
+## Additional Settings
+
+ You can also configure lots of tmux behavior by editing
+`~/.tmux.conf`. Here is my configuration:
+
+{% highlight yaml %}
+# act like vim
+setw -g mode-keys vi
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind-key -r C-h select-window -t :-
+bind-key -r C-l select-window -t :+
+
+# act like GNU screen
+unbind C-b
+set -g prefix C-a
+
+# look good
+set -g default-terminal "xterm-256color"
+{% endhighlight %}
+
+Should be self explaining mostly, first block makes tmux keys more
+vim-like. Also I am changing the tmux prefix binding to `Ctrl+A`. I had
+quite some trouble getting colors right within tmux: Using the last
+setting here and defining the `$TERM` via a bash alias in `~/.bashrc` finally did the
+trick:
+
+{% highlight bash %}
+alias tmux='TERM=xterm-256color tmux -2'
+alias tmuxinator='TERM=xterm-256color tmuxinator'
+alias mux='TERM=xterm-256color mux'
+{% endhighlight %}
+
+As I already said in the beginning, there is a lot of other stuff you
+could do and learn with tmux. But this article should get you going to
+use it in your daily work as easily accessible working environments.
 
 ## Links
 - [tmux][1]
-- [GNU Screen][2]
+- [tmuxinator][5]
 - [xmonad][3]
 - [KWin][4]
 
