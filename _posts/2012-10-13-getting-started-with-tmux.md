@@ -158,7 +158,7 @@ could also use `mux awesome_app` instead.
 To get help for tmux commands simply hit `Ctrl+B ?` to show all the tmux
 commands. You should easily figure out, how to move around between
 windows and panes. If you want to exit your tmux session you could
-either do `Ctrl+B :kill-sessions` (kills the session) or `Ctrl+B d`
+either do `Ctrl+B :kill-session` (kills the session) or `Ctrl+B d`
  (detach only, session persists).
 
 ## Additional Settings
@@ -198,7 +198,7 @@ alias mux='TERM=xterm-256color mux'
 
 As I already said in the beginning, there is a lot of other stuff you
 could do and learn with tmux. But this article should get you going to
-use it in your daily work as easily accessible working environments.
+use it in your daily work, providing easily accessible working environments.
 
 ## Links
 - [tmux][1]
