@@ -29,7 +29,7 @@ decided to be a full time software developer. Just too often I had to deal with
 bad software, which really annoyed me. As I love software development so
 much, this is what I want to do: Deliver great Software!
 
-Until about three years ago I mostly developed desktop software. Today I
+Until 2008 I mostly developed desktop software. Today I
 focus on state of the art web and mobile technologies and their combination.
 I did work in startups and love the scene.
 
@@ -43,15 +43,15 @@ development team.
 
 Besides getting your coding needs done, I will help you with getting
 your software architecture right. Furthermore we can improve your development
-process together by introduction well structured, lean and agile
+process together by introducing well structured, lean and agile
 techniques.
 
 ## The bare Facts
 You want to see some bullet points with skills and project experience?
 Alright, here you go:
 ### Software Development Skills
-- Cross platform and Android mobile apps
 - Web Development
+- Cross platform and Android mobile apps
 - Web and Mobile Software Architecture
 - Scrum and Agile Methodologies
 - Lean Processes in Software Development
@@ -60,11 +60,10 @@ Alright, here you go:
 - Online Marketing and SEO basics
 
 ### Programming Languages and Technologies
-- Javascript (jQuery, AngularJS, Node.js, Backbone.js, Phonegap/Cordova,
-  ...)
-- HTML
-- CSS (Less, Sass)
 - Ruby on Rails
+- Javascript/Coffeescript (jQuery, AngularJS, Node.js, Backbone.js, Phonegap/Cordova,
+  ...)
+- HTML and CSS (Less, Sass)
 - Java (Android)
 - Python
 - 3rd Party and Social Media APIs (facebook, linkedIn, GetSatisfaction,
@@ -74,6 +73,7 @@ Alright, here you go:
 
 ### Work Experience
 - Freelance Web Developer
+- [UFOstart](http://ufostart.com/): Web Developer and Team Lead
 - [Private University of Applied Sciences](http://www.pfh.de/en/), Göttingen: Mobile Developer
 - [byMii GmbH](http://www.bymii.de/): Web and mobile Developer
 - [University of Göttingen](http://www.uni-goettingen.de/en/1.html): Research Assistant
