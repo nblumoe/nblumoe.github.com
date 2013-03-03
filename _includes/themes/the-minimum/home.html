@@ -14,56 +14,36 @@
 </head>
 <body>
 
-<div id="page" class="hentry">
+<div id="home" class="hentry">
 	<header class="the-header">
-		<div class="unit-head">
-			<div class="unit-inner unit-head-inner">
-				<p class="logo"><a href="{{ HOME_PATH }}">{{ site.title }}</a></p>
-				<nav class="nav-global">
-					<ul>
-						<li class="archive"><a href="/archive.html">archive</a></li>
-						<li class="page"><a href="/pages.html">pages</a></li>
-						<li class="category"><a href="/categories.html">categories</a></li>
-						<li class="tag"><a href="/tags.html">tags</a></li>
-					</ul>
-				</nav>
-			</div><!-- unit-inner -->
-		</div><!-- unit-head -->
 	</header>
 	<div class="body" role="main">
 		<div class="unit-body">
 			<div class="unit-inner unit-body-inner">
 				<div class="entry-content">
-					{{ content }}
+          <article class="unit-article layout-page">
+            <div class="unit-inner unit-article-inner">
+              <div class="content">
+                <div class="bd">
+                  <div class="entry-content">
+                    {{ content }}
+                  </div><!-- entry-content -->
+                </div><!-- bd -->
+                <p class="gotop">
+                  <a href='#portfolio'>Portfolio</a>
+                  <a href='#expertise'>Expertise</a>
+                  <a href='#hire_me'>Hire me</a>
+                  <a href='#contact'>Contact</a>
+                  <a id='gotop-link' href="#home">Back to Top</a>
+                </p>
+
+              </div><!-- content -->
+            </div><!-- unit-inner -->
+          </article>
 				</div>
 			</div><!-- unit-inner -->
 		</div><!-- unit-body -->
 	</div><!-- body -->
-	<footer class="the-footer">
-		<div class="unit-foot">
-			<div class="unit-inner unit-foot-inner">
-				<div class="misc vcard">
-          <!-- AddThis Follow BEGIN -->
-          <p>Follow Me</p>
-          <div class="addthis_toolbox addthis_32x32_style
-            addthis_vertical_style">
-            <a class="addthis_button_twitter_follow"
-              addthis:userid="nblumoe"></a>
-            <a href="https://plus.google.com/108620647514621362580?rel=author"
-              class="addthis_button_google_follow"
-              addthis:userid="108620647514621362580?rel=author"></a>
-            <a class="addthis_button_rss_follow"
-              addthis:url="http://feeds.feedburner.com/nils-blum-oeste?format=xml"></a>
-            <a href="http://github.com/{{ site.author.github }}/">
-              <img src="/assets/images/logos/octocat.png"/>
-              <span>github</span>
-            </a>
-          </div>
-          <!-- AddThis Follow END -->
-				</div><!-- misc -->
-			</div><!-- unit-foot-inner -->
-		</div><!-- unit-foot -->
-	</footer>
 </div><!-- page -->
 <script>
 	(function(d, s) {
@@ -80,14 +60,6 @@
 <script>
 /*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
 (function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
-</script>
-<!-- HitTail Code -->
-<script type="text/javascript">
-<!-- HitTail Code -->
-<script type="text/javascript">
-	(function(){ var ht = document.createElement('script');ht.async = true;
-	  ht.type='text/javascript';ht.src = '//98278.hittail.com/mlt.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
 </script>
   {% include JB/analytics %}
 </body>

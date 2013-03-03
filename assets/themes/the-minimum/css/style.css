@@ -859,3 +859,37 @@ pre {
 .the-footer .unit-inner img {
   margin-bottom: 0px !important;
 }
+
+#home .nav a, #home .gotop a{
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,00,0,0.4);
+  padding: 5px 10px 6px;
+  border-radius: 7px;
+  background: rgba(0,100,0,0.3);
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0px -1px 1px #666;
+  color: white;
+  background-color: #77bb77;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.1)), color-stop(100%, rgba(0,0,0,0.2)));
+}
+
+#home .gotop{
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
+
+#home .gotop a{
+  display: block;
+  margin-top: 5px;
+}
+
+#home .gotop #gotop-link{
+  margin-top: 15px;
+  background-color: #bbb;
+}
