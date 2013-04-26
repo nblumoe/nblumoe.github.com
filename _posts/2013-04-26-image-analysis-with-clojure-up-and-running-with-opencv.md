@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Image analysis with Clojure: Up and running with OpenCV"
+title: "Image analysis with Clojure and OpenCV: A face detection example"
 description: ""
 category: software
 tags: [clojure, java, opencv, imageanalysis]
