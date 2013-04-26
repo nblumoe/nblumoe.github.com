@@ -21,8 +21,7 @@ necessary steps:
 2. package native dependencies
 3. create local maven repository
 4. handle dependencies with leiningen
-5. fix issue with class loader
-6. code on! (= example time)
+5. code on! (= example time)
 
 This guide is based on [OpenCV: Introduction to Java
 Development](http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html)
@@ -135,42 +134,6 @@ $ lein deps
 {% endhighlight %}
 
 Watch the output to see how it gets the packages from your local repo.
-
-## Fix class loader issue
-
-> This is not necessary anymore. With a recent version of Leiningen
-> you can skip this section!
-
-We could have been done at this point! However there is an annoying
-quirk that we have to address: How Leiningen loads classes during import
-does not work with the Java classes from OpenCV. We could slightly
-change the original classes to make it work, but we can also fix it from
-within clojure with these two functions:
-
-{% highlight clojure %}
-(defn wall-hack-method
-  [class-name method-name params obj & args]
-  (-> class-name 
-      (.getDeclaredMethod (name method-name)
-                          (into-array Class params))
-      (doto (.setAccessible true))
-      (.invoke obj (into-array Object args))))
-
-(defn load-lib [class lib]
-  (wall-hack-method java.lang.Runtime "loadLibrary0"
-                    [Class String]
-                    (Runtime/getRuntime) class lib))
-{% endhighlight %}
-Code published by Aaron Cohen
-[here](https://groups.google.com/forum/#!msg/clojure/br_sTSuWBJ8/NXppL1EWZhAJ).
-
-The first function allows use to access protected methods on a Java
-class. The second one uses that load a library with the same class
-loader like the given class.
-
-If we would use the Leiningen class loader, we would end up with missing
-links to the native libraries. So we are going to use these methods in
-the last part, were we eventually use OpenCV in our project!
 
 ## Face detection example walkthrough
 
