@@ -3,7 +3,7 @@ layout: post
 title: "Image analysis with Clojure and OpenCV: A face detection example"
 description: ""
 category: software
-tags: [clojure, java, opencv, imageanalysis]
+tags: [clojure, java, opencv, image-analysis]
 ---
 {% include JB/setup %}
 
