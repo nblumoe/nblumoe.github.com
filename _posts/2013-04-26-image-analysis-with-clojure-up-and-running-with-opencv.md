@@ -138,6 +138,9 @@ Watch the output to see how it gets the packages from your local repo.
 
 ## Fix class loader issue
 
+> This is not necessary anymore. With a recent version of Leiningen
+> you can skip this section!
+
 We could have been done at this point! However there is an annoying
 quirk that we have to address: How Leiningen loads classes during import
 does not work with the Java classes from OpenCV. We could slightly
@@ -158,6 +161,8 @@ within clojure with these two functions:
                     [Class String]
                     (Runtime/getRuntime) class lib))
 {% endhighlight %}
+Code published by Aaron Cohen
+[here](https://groups.google.com/forum/#!msg/clojure/br_sTSuWBJ8/NXppL1EWZhAJ).
 
 The first function allows use to access protected methods on a Java
 class. The second one uses that load a library with the same class
@@ -186,26 +191,6 @@ and do some face detection with OpenCV and Clojure:
 {% endhighlight %}
 
 This simply imports all the stuff we need from OpenCV.
-
-{% highlight clojure %}
-(defn wall-hack-method
-  [class-name method-name params obj & args]
-  (-> class-name 
-      (.getDeclaredMethod (name method-name)
-                          (into-array Class params))
-      (doto (.setAccessible true))
-      (.invoke obj (into-array Object args))))
-
-(defn load-lib [class lib]
-  (wall-hack-method java.lang.Runtime "loadLibrary0"
-                    [Class String]
-                    (Runtime/getRuntime) class lib))
-{% endhighlight %}
-
-These functions have been mentioned in the previous chapter already. We
-need them to load the native OpenCV libraries. It's a hack to use the
-right class loader, published by Aaron Cohen
-[here](https://groups.google.com/forum/#!msg/clojure/br_sTSuWBJ8/NXppL1EWZhAJ).
 
 {% highlight clojure %}
 (def face-detections (atom []))
@@ -281,19 +266,15 @@ don't have to pass this around or update the atom reference.
 {% highlight clojure %}
 (defn main
   []
-  (load-lib Core Core/NATIVE_LIBRARY_NAME)
+  (clojure.lang.RT/loadLibrary Core/NATIVE_LIBRARY_NAME)
   (reset! face-detections (MatOfRect.))
   (process-and-save-image!))
 {% endhighlight %}
 
 And finally here is our entry point. There is a very important thing
-here: 'load-lib' function is being used to actually load the native
-library. We pass 'Core' as a first parameter to use the same class
-loader which has been used for that class. The second parameter is a
-constant from Core class which holds the name of the native library.
-
-You have to load the native libraries before you can work with the Java
-bindings.
+here: You have to load the native libraries before you can work with the Java
+bindings. The name of the native library is retrieved from the Core
+class.
 
 After that we reset face-detections to hold a new instance of
 'MatOfRect'. We could only do that after loading the native libraries,
