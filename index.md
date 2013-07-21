@@ -7,7 +7,9 @@ tagline: All in software development
 
 <img src="/assets/images/portrait_bw.png"
 style="width:auto;height:220px;float:left;"/>
-> "Software development is awesome. Share some love!"
+> "The central enemy of reliability is complexity."
+> (Geer et al.)
+
 ## Nils Blum-Oeste
 ### Passionate Software Craftmanship
 
