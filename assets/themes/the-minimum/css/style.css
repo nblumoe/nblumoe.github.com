@@ -877,6 +877,27 @@ pre {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.1)), color-stop(100%, rgba(0,0,0,0.2)));
 }
 
+#portfolio-images .img-container {
+  width: 23%;
+  max-height: 130px;
+  float: left;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+#portfolio-images .img-container:hover {
+  -webkit-transform: scale(2);
+  max-height: 99999px;
+}
+
+#portfolio-images img {
+  width: 100%;
+  height: auto;
+  margin: 0px !important;
+}
+
 #home .gotop{
   display: none;
   position: fixed;

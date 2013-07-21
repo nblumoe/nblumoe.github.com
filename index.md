@@ -20,16 +20,21 @@ style="width:auto;height:220px;float:left;"/>
 </div>
 
 # Portfolio
-<img src="/assets/images/portrait_bw.png"
-style="width:20%;height:auto;float:left;"/>
-<img src="/assets/images/portrait_bw.png"
-style="width:20%;height:auto;float:left;"/>
-<img src="/assets/images/portrait_bw.png"
-style="width:20%;height:auto;float:left;"/>
-<img src="/assets/images/portrait_bw.png"
-style="width:20%;height:auto;float:left;"/>
-<img src="/assets/images/portrait_bw.png"
-style="width:20%;height:auto;float:left;"/>
+
+<div id='portfolio-images'>
+  <div class='img-container'>
+    <img src="/assets/images/home/UFOstart.png"/>
+  </div>
+  <div class='img-container'>
+    <img src="/assets/images/home/byMii.png"/>
+  </div>
+  <div class='img-container'>
+    <img src="/assets/images/home/TestAutoren.png"/>
+  </div>
+  <div class='img-container'>
+    <img src="/assets/images/home/PomodoroEasy.png"/>
+  </div>
+</div>
 
 <div class='clearfix'>
 </div>
