@@ -14,33 +14,11 @@ style="width:auto;height:220px;float:left;"/>
 ### Passionate Software Craftmanship
 
 <div class='nav'>
-<a href='#portfolio'>Portfolio</a>
 <a href='#expertise'>Expertise</a>
 <a href='#hire_me'>Hire me</a>
 <a href='#contact'>Contact</a>
 <a href='/blog'>Blog</a>
 </div>
-
-# Portfolio
-
-<div id='portfolio-images'>
-  <div class='img-container'>
-    <img src="/assets/images/home/UFOstart.png"/>
-  </div>
-  <div class='img-container'>
-    <img src="/assets/images/home/byMii.png"/>
-  </div>
-  <div class='img-container'>
-    <img src="/assets/images/home/TestAutoren.png"/>
-  </div>
-  <div class='img-container'>
-    <img src="/assets/images/home/PomodoroEasy.png"/>
-  </div>
-</div>
-
-<div class='clearfix'>
-</div>
-
 # Expertise
 ### Software Development Skills
 - Web Development
