@@ -258,4 +258,3 @@ Please let me know what you think and if this did work for you. Do not
 hesitate to ask, if you run into issues somewhere or if I wasn't clear
 at some point.
 
-Don't forget to share, if you like it. :)
