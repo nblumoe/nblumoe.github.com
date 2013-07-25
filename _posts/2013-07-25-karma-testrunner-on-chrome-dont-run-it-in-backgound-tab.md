@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karma testrunner on Chrome? Dont run it in backgound tab"
+title: "Karma very slow on Chrome? Dont run it in backgound tab"
 description: ""
 category: software
 tags: [testing, tools, javascript]
