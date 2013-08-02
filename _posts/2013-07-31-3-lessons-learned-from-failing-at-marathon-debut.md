@@ -11,7 +11,7 @@ Last year I failed miserably on running my first marathon. Severe pain from
 shin splints forced me to stop running completely while training for Berlin
 marathon 2012. I really tried to continue running but that was probably the
 worst thing to do. Finally I realized I had to take a break. I stopped running
-completely for about three month.
+completely for about three months.
 
 Having to do so was disappointing of course. But it also was an important
 lesson, an opportunity to learn. I thought about why my body shut down. What
@@ -35,21 +35,23 @@ beyond it's limits endlessly. Going beyond your limits has it's own limitations
 so to speak.
 
 During my last year's marathon debut training I pushed too hard. The progression
-towards longer distance and higher speed was just too fast.
+towards longer distance and higher speed was just too fast. Result?
+Ending up with shin splints due to overtraining.
 
 ## A good Running Technique pays off
 
 Suffering from shin splints badly, I visited a doctor and an orthopedic.
-Their suggestion was getting foot orthotics (of course). I even got
+Their suggestion was getting foot orthotics (of course). I got
 those and started to get used to them.
 
 However it just felt wrong. I mean not just in the sense, that I was not
 used to them. But I truly had the impression this wasn't the right and
-sustainable solution. Luckily I also visited a running shop in Berlin
-and talked to people there. Very proficient long distance runner who did
+sustainable solution. Luckily I also visited a [running
+shop](http://www.longdistance.de/) in Berlin
+and talked to people there. Very proficient long distance runners who did
 super impressive stuff like the
 [Transeuropalauf](http://www.transeuropalauf.de/tel_new/index.php?lan=en&page=Startseite&content=Startseite)
-shared their experience with these kind of injuries with me.
+shared their very own experiences with these kind of injuries with me.
 
 They have been at the same point like I was. And they also started to
 use orthotics afterwards. But all of them told me in the long term they
@@ -62,25 +64,28 @@ Instead I read and learned about running injuries, what causes them and
 what might help to prevent them. Quickly I stumbled upon articles about
 running technique and barefoot running.
 
-My shin splints resulted from over pronating. I read a better running
+My shin splints resulted from over pronating. I read  that a better running
 technique might help with that. To improve my technique I got a pair of
 Vibram Five Fingers and started to do very cautious and easy runs with
 them. Right from the beginning it felt very, very good.
 
-Just a little bit later I stopped to use the insoles at all. Instead I
+Just a little bit later I stopped to use the insoles (in my normal
+conventional running shoes) at all. Instead I
 progressivly did more and longer runs with the Vibrams. While doing so,
 I also paid attention to my running technique: I did shorter strides,
 ran with a higher frequency and an upright posture.
 
 I am pretty sure improving my running technique really helped with
 overcoming my shin splints! Furthermore it feels like running far more
-efficiently which pays off especially in long runs.
+efficiently which pays off especially in long runs. Minimalist shoes
+really helped with that, but the important thing was to get the
+technique right!
 
 ## It goes on
 
 This is rather some kind of meta lesson, but maybe the most important
 thing I learned: Having failed with the marathon debut and having to
-stop running completly for several month did not mean the end of running
+stop running completely for several months did not mean the end of running
 for me.
 
 Yes, it was mentally painful and very inconvenient not to run for such a
