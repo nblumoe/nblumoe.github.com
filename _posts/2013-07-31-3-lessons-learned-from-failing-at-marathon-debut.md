@@ -3,7 +3,7 @@ layout: post
 title: "3 lessons learned from failing at marathon debut"
 description: ""
 category: sports
-tags: [Marathon, Running, Training]
+tags: [marathon, running, training]
 ---
 {% include JB/setup %}
 
