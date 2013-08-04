@@ -917,10 +917,12 @@ pre {
 
 .gplus_link {
   border-bottom: none !important;
+  position: relative;
+  top: -3px;
 }
 
 
 .gplus_link img {
   display: inline;
-  margin: 0px 0px 9px 6px !important;
+  margin: 0px 0px 7px 0px !important;
 }
