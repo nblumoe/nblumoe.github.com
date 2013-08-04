@@ -914,3 +914,13 @@ pre {
   margin-top: 15px;
   background-color: #bbb;
 }
+
+.gplus_link {
+  border-bottom: none !important;
+}
+
+
+.gplus_link img {
+  display: inline;
+  margin: 0px 0px 9px 6px !important;
+}
